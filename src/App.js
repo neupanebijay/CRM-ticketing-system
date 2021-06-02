@@ -1,12 +1,13 @@
 import './App.css';
 import { DefaultLayout } from './Layout/DefaultLayout';
+import { Dashboard } from './pages/pages/dashboard/Dashboard.page';
 
 
 function App() {
   return (
     <div className="App">
       <DefaultLayout >
-      Now after making this we can pass it as props in default layout section.
+          <Dashboard />
       </DefaultLayout>
       {/* <Entry /> */}
     </div>

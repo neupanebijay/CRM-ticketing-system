@@ -8,13 +8,13 @@ export const DefaultLayout = ({children}) => {
 
 
 {/* This is a section for header */}
-            <header className="header">
+            <header className="header mb-2">
                 <Header />
             </header>
 {/* This is a main section. All main contents go here */}
             
 
-            <main className="main">
+            <main className="main-body">
             {children}
             </main>
 
