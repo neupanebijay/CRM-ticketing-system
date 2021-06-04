@@ -8,7 +8,7 @@ export const DefaultLayout = ({children}) => {
 
 
 {/* This is a section for header */}
-            <header className="header mb-2">
+            <header className="header">
                 <Header />
             </header>
 {/* This is a main section. All main contents go here */}

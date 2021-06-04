@@ -1,13 +1,15 @@
 import './App.css';
 import { DefaultLayout } from './Layout/DefaultLayout';
-import { Dashboard } from './pages/pages/dashboard/Dashboard.page';
+import { AddTicket } from './pages/add-ticket/AddTicket.page';
+
 
 
 function App() {
   return (
     <div className="App">
       <DefaultLayout >
-          <Dashboard />
+          {/* <Dashboard /> */}
+          <AddTicket />
       </DefaultLayout>
       {/* <Entry /> */}
     </div>

@@ -15,12 +15,12 @@ export const TicketTable = ({tickets}) => {
 
             
             <tbody>
-                {tickets.length ? tickets.map(row=>(
-                <tr key={row.id}>
-                    <td>{row.id}</td>
-                    <td>{row.subject}</td>
-                    <td>{row.status}</td>
-                    <td>{row.addedAt}</td>
+                {tickets.length ? tickets.map(ticket=>(
+                <tr key={ticket.id}>
+                    <td>{ticket.id}</td>
+                    <td>{ticket.subject}</td>
+                    <td>{ticket.status}</td>
+                    <td>{ticket.addedAt}</td>
                 </tr>
                 )) :
 

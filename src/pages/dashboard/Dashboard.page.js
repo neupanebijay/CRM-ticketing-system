@@ -1,14 +1,14 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import tickets from '../../../assets/data/dummy-tickets.json';
-import { BreadcrumbFile } from '../../../components/breadcrumb/BreadcrumbFile.comp';
-import { TicketTable } from '../../../components/tickets-table/TicketTable.comp';
+import tickets from '../../assets/data/dummy-tickets.json';
+import { BreadcrumbFile } from '../../components/breadcrumb/BreadcrumbFile.comp';
+import { TicketTable } from '../../components/tickets-table/TicketTable.comp';
 
 export const Dashboard = () => {
     return (
         <Container>
             <Row>
-                <Col>
+                <Col className="mt-5">
                     <BreadcrumbFile page="Dashboard"/>
                 </Col>
             </Row>
