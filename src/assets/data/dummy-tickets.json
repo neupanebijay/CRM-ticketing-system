@@ -3,36 +3,88 @@
         "id": "1",
         "subject" : "SSL issue",
         "status": "Client Response Pending",
-        "addedAt": "12-03-2019"
+        "addedAt": "12-03-2019",
+        "history":[
+            {
+                "date": "20-03-2021",
+                "message": "email issue",
+                "messageBy": "client"
+            },
+            {
+                "date": "20-03-2021",
+                "message": "email issue solved",
+                "messageBy": "server"
+            },
+            {
+                "date": "20-03-2021",
+                "message": "email issue",
+                "messageBy": "operator"
+            }
+        ]
     },
     {
         "id": "2",
         "subject" : "Network error",
         "status": "Client Response Pending",
-        "addedAt": "12-03-2020"
+        "addedAt": "12-03-2020",
+        "history":[
+            {
+                "date": "20-03-2021",
+                "message": "website down. please fix it",
+                "messageBy": "client"
+            }
+        ]
     },
     {
         "id": "3",
         "subject" : "website down",
         "status": "Client Response Pending",
-        "addedAt": "02-03-2019"
+        "addedAt": "02-03-2019",
+        "history":[
+            {
+                "date": "20-03-2021",
+                "message": "website down. please fix it",
+                "messageBy": "client"
+            }
+        ]
     },
     {
         "id": "4",
         "subject" : "Issue with the database",
         "status": "Client Response Pending",
-        "addedAt": "12-06-2019"
+        "addedAt": "12-06-2019",
+        "history":[
+            {
+                "date": "20-03-2021",
+                "message": "email issue",
+                "messageBy": "client"
+            }
+        ]
     },
     {
         "id": "5",
         "subject" : "SSL issue",
         "status": "Client Response Pending",
-        "addedAt": "25-07-2019"
+        "addedAt": "25-07-2019",
+        "history":[
+            {
+                "date": "20-03-2021",
+                "message": "email issue",
+                "messageBy": "client"
+            }
+        ]
     },
     {
         "id": "6",
         "subject" : "SSL issue",
         "status": "Client Response Pending",
-        "addedAt": "30-08-2019"
+        "addedAt": "30-08-2019",
+        "history":[
+            {
+                "date": "20-03-2021",
+                "message": "email issue",
+                "messageBy": "client"
+            }
+        ]
     }
 ]
