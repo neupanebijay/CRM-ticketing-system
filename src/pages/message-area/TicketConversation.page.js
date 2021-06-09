@@ -1,18 +1,28 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 import tickets from '../../assets/data/dummy-tickets.json';
 import { BreadcrumbFile } from '../../components/breadcrumb/BreadcrumbFile.comp';
 import { TicketConversation } from '../../components/ticket-conversation/TicketConversation..comp';
 import { UpdateTicket } from '../../components/ticket-conversation/UpdateTicket.comp';
 
-const singleTicket = tickets[0]
+// const singleTicket = tickets[0]
 export const TicketMessage = () => {
+    const {tId} =useParams()
     const [message, setMessage] = useState('')
+    const [singleTicket, setsingleTicket] = useState('')
+
+    
 
     useEffect(() => {
-        
-    }, [message])
+        for(let i=0; i<tickets.length; i++){
+            if(tickets[i].id == tId){
+                setsingleTicket(tickets[i])
+                continue
+            }
+        }
+    }, [message, tId])
 
     // handleOn change
     const handleOnChange =(e)=>{
@@ -25,7 +35,7 @@ export const TicketMessage = () => {
         
     }
     return (
-        <Container>
+        <Container className="ticket-conversation">
              <Row>
                 <Col className="mt-5">
                     <BreadcrumbFile page="Ticket Conversation"/>
@@ -33,6 +43,7 @@ export const TicketMessage = () => {
             </Row>
              <Row>
                 <Col className="text-weight-bolder text-secondary">
+                    
                     <div className="subject">Subject:         {singleTicket.subject}</div>
                     <div className="ticket-open">Ticket Open:{singleTicket.addedAt}</div>
                     <div className="status">Status: {singleTicket.status}</div> 
@@ -44,7 +55,10 @@ export const TicketMessage = () => {
             <hr/>
             <Row>
                 <Col className="mt-5">
-                    <TicketConversation msgs={singleTicket.history}/>
+                    {/* This history is from dummy-tickets */}
+                    {singleTicket.history && <TicketConversation msgs={singleTicket.history}/> }
+                     
+                    
                 </Col>
             </Row>
 

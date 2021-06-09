@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import tickets from '../../assets/data/dummy-tickets.json'
 import { BreadcrumbFile } from '../../components/breadcrumb/BreadcrumbFile.comp'
 import { SearchForm } from '../../components/search-form/SearchForm.comp'
 import { TicketTable } from '../../components/tickets-table/TicketTable.comp'
+
 
 export const TicketsList = () => {
     const [searchTicket, setSearchTicket] = useState('')
@@ -29,12 +31,14 @@ export const TicketsList = () => {
         <Container>
             <Row>
                 <Col className="mt-5">
-                    <BreadcrumbFile page="Dashboard"/>
+                    <BreadcrumbFile page="TicketList"/>
                 </Col>
             </Row>
             <Row className="mt-5">
                 <Col>
-                    <Button variant="success">Add Ticket</Button>
+                    <Link to="/add-ticket">
+                        <Button variant="success">Add Ticket</Button>
+                    </Link>
                 </Col>
                 <Col>
                     <SearchForm  searchTicket ={searchTicket} handleOnChange={handleOnChange} />

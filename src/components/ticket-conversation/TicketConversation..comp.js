@@ -24,5 +24,5 @@ export const TicketConversation = ({msgs}) => {
 
 
 TicketConversation.protoTypes ={
-    msg: PropTypes.array.isRequired
+    msgs: PropTypes.array.isRequired
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import tickets from '../../assets/data/dummy-tickets.json';
 import { BreadcrumbFile } from '../../components/breadcrumb/BreadcrumbFile.comp';
 import { TicketTable } from '../../components/tickets-table/TicketTable.comp';
@@ -15,7 +16,9 @@ export const Dashboard = () => {
 
             <Row>
                 <Col  className="text-center mt-5 mb-2">
-                     <Button variant="success" style={{'fontSize': '1.5rem', 'padding': '10px 15px'}}>Add New Ticket </Button>
+                    <Link to="/add-ticket">
+                        <Button variant="success" style={{'fontSize': '1.5rem', 'padding': '10px 15px'}}>Add New Ticket </Button>
+                     </Link>
                 </Col>
             </Row>
             <Row>
