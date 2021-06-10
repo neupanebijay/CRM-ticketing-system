@@ -14,7 +14,7 @@ export const TicketMessage = () => {
     const [singleTicket, setsingleTicket] = useState('')
 
     
-
+// is rendered just once
     useEffect(() => {
         for(let i=0; i<tickets.length; i++){
             if(tickets[i].id == tId){
@@ -44,7 +44,7 @@ export const TicketMessage = () => {
              <Row>
                 <Col className="text-weight-bolder text-secondary">
                     
-                    <div className="subject">Subject:         {singleTicket.subject}</div>
+                    <div className="subject">Subject:  {singleTicket.subject}</div>
                     <div className="ticket-open">Ticket Open:{singleTicket.addedAt}</div>
                     <div className="status">Status: {singleTicket.status}</div> 
                 </Col>
@@ -56,6 +56,7 @@ export const TicketMessage = () => {
             <Row>
                 <Col className="mt-5">
                     {/* This history is from dummy-tickets */}
+                    {/* if single ticket with history exists then only show the TicketConversation */}
                     {singleTicket.history && <TicketConversation msgs={singleTicket.history}/> }
                      
                     
